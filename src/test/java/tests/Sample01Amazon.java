@@ -18,7 +18,7 @@ public class Sample01Amazon extends Base {
 
     @Test
     @Order(1)
-    protected void isTitleContains() {
+    void isTitleContains() {
 
         String expectedTitle = "Amazon";
         String actualTitle = Driver.getDriver().getTitle();
@@ -28,14 +28,14 @@ public class Sample01Amazon extends Base {
 
     @Test
     @Order(2)
-    protected void isSearchBoxEnabled() {
+    void isSearchBoxEnabled() {
 
         Assertions.assertTrue(amazon.searchBox.isEnabled());
     }
 
     @Test
     @Order(3)
-    protected void search() {
+    void search() {
 
         String keyword = "java";
         amazon.searchBox.sendKeys(keyword + Keys.ENTER);
